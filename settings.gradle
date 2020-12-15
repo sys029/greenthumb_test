@@ -1,0 +1,2 @@
+rootProject.name='Greenthumb_test'
+include ':app'
