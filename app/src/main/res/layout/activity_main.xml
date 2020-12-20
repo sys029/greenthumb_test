@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,26 +8,139 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<LinearLayout
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/blackColor"
+        android:textStyle="bold"
+        android:textSize="35dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Email"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/editTextPassword"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:checkedButton="@id/radioUser"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioUser"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="User"
+                android:padding="10dp"
+                android:focusable="true"
+                android:layout_marginRight="10dp"
+                android:textSize="16dp"
+                android:buttonTint="@color/blackColor"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Provider"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_marginRight="10dp"
+                android:buttonTint="@color/blackColor"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Consultant"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:buttonTint="@color/blackColor"/>
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot your password?"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="viewEnd"/>
+
+    <Button
+        android:text="LOGIN"
+        android:id="@+id/buttonLogin"
+        android:background="@drawable/bg_btn_mono"
+        android:textColor="@color/whiteColor"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont have an account ?"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+
     <ProgressBar
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:id="@+id/progressBar"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="STOP PROGRESS"
-        android:textSize="15dp"
-        android:id="@+id/progressStop"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="START PROGRESS"
-        android:textSize="15dp"
-        android:id="@+id/progressStart"/>
+        android:id="@+id/progressBar"/>
+        
 
 </LinearLayout>
+
+
+</RelativeLayout>
+

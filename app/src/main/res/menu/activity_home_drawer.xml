@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+
+            android:icon="@drawable/gardening"
+            android:iconTint="#ffff"
+            android:title="GARDENING" />
+
+        <item
+
+            android:icon="@drawable/crops"
+            android:iconTint="#ffff"
+            android:title="CROPS" />
+        <item
+            android:icon="@drawable/vegetable"
+            android:iconTint="#ffff"
+            android:title="PRODUCTS" />
+        <item
+            android:icon="@drawable/market_place"
+            android:iconTint="#ffff"
+            android:title="MARKET PLACE" />
+        <item
+            android:icon="@drawable/article"
+            android:iconTint="#ffff"
+            android:title="ARTICLE" />
+        <item
+
+            android:icon="@drawable/gallery"
+            android:iconTint="#ffff"
+            android:title="GALLERY" />
+
+
+
+    </group>
+</menu>
