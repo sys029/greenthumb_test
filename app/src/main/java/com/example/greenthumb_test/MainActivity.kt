@@ -1,9 +1,7 @@
 package com.example.greenthumb_test
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -54,6 +52,8 @@ class MainActivity : BaseActivity() {
                         hideProgressBar()
                         if(response.body()?.status=="success"){
 
+                            editTextEmail.setText("")
+                            editTextPassword.setText("")
                             Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
                             val intent = Intent(applicationContext, HomeActivity::class.java)
                             startActivity(intent)
