@@ -55,7 +55,9 @@ class MainActivity : BaseActivity() {
                             editTextEmail.setText("")
                             editTextPassword.setText("")
                             Toast.makeText(applicationContext, response.body()?.message, Toast.LENGTH_LONG).show()
+                            SharedPrefManager.getInstance(applicationContext).saveUser(response.body()?.data!!)
                             val intent = Intent(applicationContext, HomeActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(intent)
 
 
@@ -70,4 +72,17 @@ class MainActivity : BaseActivity() {
 
 
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        if(SharedPrefManager.getInstance(this).isLoggedIn){
+            val intent = Intent(applicationContext, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            startActivity(intent)
+        }
+    }
+
+
 }

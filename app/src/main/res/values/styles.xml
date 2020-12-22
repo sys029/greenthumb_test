@@ -19,6 +19,10 @@
         <item name="spinBars">true</item>
     </style>
 
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_spalsh</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="windowActionBar">false</item>

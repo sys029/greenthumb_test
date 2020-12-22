@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_search"
-        android:icon="@drawable/ic_search_"
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_exit"
 
-        android:title="Search"
+        android:title="Log Out"
         app:showAsAction="always"/>
 
 </menu>

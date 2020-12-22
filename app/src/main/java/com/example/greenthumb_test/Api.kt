@@ -10,7 +10,7 @@ interface Api {
     @FormUrlEncoded
     @POST("login")
     fun userLogin(
-        @Field("email_id") email:String,
+        @Field("email_id") email_id:String,
         @Field("password") password: String,
         @Field("user_type") user_type: Int,
         @Field("provider_type") provider_type: Int
