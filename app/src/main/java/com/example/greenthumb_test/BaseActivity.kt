@@ -22,10 +22,7 @@ open class BaseActivity : AppCompatActivity(),ConnectivityReceiver.ConnectivityR
         )
     }
 
-
     private fun showMessage(isConnected: Boolean) {
-
-
 
         if (!isConnected) {
 

@@ -1,5 +1,6 @@
 package com.example.greenthumb_test
 
+import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -14,6 +15,6 @@ interface Api {
         @Field("password") password: String,
         @Field("user_type") user_type: Int,
         @Field("provider_type") provider_type: Int
-    ): Call<LoginResponse>
+    ): Call<JsonObject>
 
 }
