@@ -9,8 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.*
-import kotlin.collections.ArrayList
 
 class MainActivity : BaseActivity() {
 
@@ -46,11 +44,19 @@ class MainActivity : BaseActivity() {
                 editTextPassword.requestFocus()
                 return@setOnClickListener
             }
+
+
             val user_type: Int = 1
             val provider_type: Int = 1
 
 
             callLoginAPI(email,password,user_type,provider_type)
+
+        }
+
+        signupText.setOnClickListener {
+            val intent = Intent(applicationContext, SignUpActivity::class.java)
+            startActivity(intent)
 
         }
 

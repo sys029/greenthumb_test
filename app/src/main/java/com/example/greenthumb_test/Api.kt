@@ -17,4 +17,34 @@ interface Api {
         @Field("provider_type") provider_type: Int
     ): Call<JsonObject>
 
+    @FormUrlEncoded
+    @POST("registration")
+    fun userSignup(
+        @Field("first_name") first_name:String,
+        @Field("last_name") last_name: String,
+        @Field("email_id") email_id:String,
+        @Field("password") password: String,
+        @Field("user_phone1") user_phone1: String,
+        @Field("country") country: String,
+        @Field("state") state: String,
+        @Field("city") city: String,
+        @Field("user_type") user_type: Int
+    ): Call<JsonObject>
+
+    @POST("country")
+    fun countryList(): Call<JsonObject>
+
+    @FormUrlEncoded
+    @POST("state")
+    fun stateList(
+        @Field("country_id") countryIDAPI:String
+    ) : Call<JsonObject>
+
+    @FormUrlEncoded
+    @POST("city")
+    fun cityList(
+        @Field("state_id") stateIDAPI:String
+    ) : Call<JsonObject>
+
+
 }

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarSignUp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/appBarSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:background="@color/whiteColor"
+            android:id="@+id/nestedScrollView"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioSignUp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rUser"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="User"
+                        android:padding="10dp"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="18dp"
+                        android:buttonTint="@color/colorPrimaryDark"/>
+                    <RadioButton
+                        android:id="@+id/rProvider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Provider"
+                        android:padding="10dp"
+                        android:textSize="18dp"
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/colorPrimaryDark"/>
+                    <RadioButton
+                        android:id="@+id/rConsultant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Consultant"
+                        android:padding="10dp"
+                        android:textSize="18dp"
+                        android:buttonTint="@color/colorPrimaryDark"/>
+
+
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstName"
+                    android:hint="First Name"
+                    android:textSize="18dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:id="@+id/lastName"
+                    android:textSize="18dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:textSize="18dp"
+                    android:id="@+id/phoneNumber"
+                    android:inputType="number"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:id="@+id/emailID"
+                    android:textSize="18dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textSize="18dp"
+                    android:id="@+id/passwordText"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    android:id="@+id/confirmPass"
+                    android:textSize="18dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15dp"
+                    android:text="Select Country"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/countrySpinner"
+                    android:background="@drawable/spinner_background"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15dp"
+                    android:text="Select State"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/stateSpinner"
+                    android:background="@drawable/spinner_background"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15dp"
+                    android:text="Select City"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/citySpinner"
+                    android:background="@drawable/spinner_background"/>
+
+                <Button
+                    android:text="Register"
+                    android:id="@+id/signUpButton"
+                    android:background="@drawable/bg_btn_mono"
+                    android:textColor="@color/whiteColor"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
